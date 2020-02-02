@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/11/linux常用命令/pics/1e46fd03-0cda-4d60-9b1c-0c256edaf6b2.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/11/linux常用命令/pics/658fc5e7-79c0-4247-9445-d69bf194c539.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/11/linux常用命令/pics/2bab4127-3e7d-48cc-914e-436be859fb05.png">
-<meta property="og:updated_time" content="2019-09-01T15:32:16.192Z">
+<meta property="og:updated_time" content="2020-02-02T08:00:59.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux 常用命令">
 <meta name="twitter:description" content="五、文件文件属性用户分为三种：文件拥有者、群组以及其它人，对不同的用户有不同的文件权限。 使用 ls 查看一个文件时，会显示一个文件的信息，例如 drwxr-xr-x 3 root root 17 May 6 00:14 .config，对这个信息的解释如下：  drwxr-xr-x：文件类型以及权限，第 1 位为文件类型字段，后 9 位为文件权限字段 3：链接数 root：文件拥有者 root：">
@@ -176,7 +176,7 @@
 <li>root：所属群组</li>
 <li>17：文件大小</li>
 <li>May 6 00:14：文件最后被修改的时间</li>
-<li>.config：文件名</li>
+<li>.config：文件名<a id="more"></a> </li>
 </ul>
 <p>常见的文件类型及其含义有：</p>
 <ul>
@@ -235,7 +235,6 @@
 <h2 id="目录的权限"><a href="#目录的权限" class="headerlink" title="目录的权限"></a>目录的权限</h2><p>文件名不是存储在一个文件的内容中，而是存储在一个文件所在的目录中。因此，拥有文件的 w 权限并不能对文件名进行修改。</p>
 <p>目录存储文件列表，一个目录的权限也就是对其文件列表的权限。因此，目录的 r 权限表示可以读取文件列表；w 权限表示可以修改文件列表，具体来说，就是添加删除文件，对文件名进行修改；x 权限可以让该目录成为工作目录，x 权限是 r 和 w 权限的基础，如果不能使一个目录成为工作目录，也就没办法读取文件列表以及对文件列表进行修改了。</p>
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><div align="center"> <img src="pics/1e46fd03-0cda-4d60-9b1c-0c256edaf6b2.png" width="450px"> </div><br>
-
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># ln [-sf] source_filename dist_filename</span><br><span class="line">-s ：默认是实体链接，加 -s 为符号链接</span><br><span class="line">-f ：如果目标文件存在时，先删除目标文件</span><br></pre></td></tr></table></figure>
 
 <h3 id="1-实体链接"><a href="#1-实体链接" class="headerlink" title="1. 实体链接"></a>1. 实体链接</h3><p>在目录下创建一个条目，记录着文件名与 inode 编号，这个 inode 就是源文件的 inode。</p>
@@ -761,7 +760,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 silver
+    		&copy; 2020 silver
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
